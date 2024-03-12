@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Liste de medicos</h1>
-    <table>
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th>Nombre</th>
@@ -17,6 +17,7 @@
                 <th>numero_identificacion</th>
                 <th>registro_medico</th>
                 <th>especialidad</th>
+                <th>ver detalles</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +29,11 @@
                          <td> {{  medico.numero_identificacion }} </td>
                          <td> {{  medico.registro_medico }} </td>
                          <td> {{  medico.especialidad }} </td>
+                        <td>
+                                <a href="/medicos/{{ medico.id }}">
+                            ver detalles
+                        </a>
+                    </td>
                   </tr>
             {% endfor %}
         </tbody>
